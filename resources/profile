@@ -1,0 +1,47 @@
+source ~/.git-completion.bash
+source ~/.git-prompt.sh
+
+# First suggested way
+#PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+# configure git prompt settings
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWUPSTREAM="verbose"
+GIT_PS1_SHOWCOLORHINTS=true
+
+#second suggested way
+PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+
+# yarn
+export PATH="$HOME/.yarn/bin:$PATH"
+
+# aliases
+alias FUCK_DERIVED_DATA="rm -rf ~/Library/Developer/Xcode/DerivedData"
+alias SublimeText="open -a /Applications/Sublime\ Text\ 2.app"
+alias Xcode="open -a /Applications/Xcode.app"
+alias Beta-Xcode="open -a /Applications/Beta/Xcode-beta.app"
+alias MacDown="open -a /Applications/MacDown.app"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# golang
+export GOPATH=$HOME/Coding/golang
+export PATH=$PATH:$GOPATH/bin
+
+# thefuck (homebrew)
+# eval "$(thefuck --alias)"
+
+# Python
+alias VIRTUAL_ENV_ACTIVATE="virtualenv env; source env/bin/activate"
+
+# nvm
+#export NVM_DIR=$HOME/.nvm
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="/Users/jordanz/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
