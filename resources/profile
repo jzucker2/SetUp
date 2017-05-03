@@ -19,6 +19,8 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 # aliases
 alias FUCK_DERIVED_DATA="rm -rf ~/Library/Developer/Xcode/DerivedData"
+# investigate further with this: http://stackoverflow.com/questions/29930198/can-i-delete-data-from-ios-devicesupport
+alias CLEAN_UP_XCODE="xcrun simctl delete unavailable"
 alias SublimeText="open -a /Applications/Sublime\ Text\ 2.app"
 alias Xcode="open -a /Applications/Xcode.app"
 alias Beta-Xcode="open -a /Applications/Beta/Xcode-beta.app"
