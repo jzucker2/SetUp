@@ -1,4 +1,5 @@
 # SetUp
+[![Build Status](https://travis-ci.org/jzucker2/SetUp.svg?branch=master)](https://travis-ci.org/jzucker2/SetUp)
 
 This is a resource for my computer setup
 
