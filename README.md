@@ -7,7 +7,8 @@ Right now this needs work
 ## Notes
 
 * Here's the [resource about setting up git on GitHub](https://help.github.com/articles/caching-your-github-password-in-git/)
-* 
+* [Updating credentials for 2FA](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+* [Updating KeyChain for credentials](https://help.github.com/articles/updating-credentials-from-the-osx-keychain/)
 
 ## TODO
 
