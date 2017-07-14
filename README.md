@@ -17,3 +17,4 @@ Right now this needs work
 - [ ] Make it work with little set up except installing xcode tools
 - [ ] First path in python, second pass in bash
 - [ ] Get working!
+- [ ] Configure Travis
