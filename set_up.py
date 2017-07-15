@@ -45,6 +45,8 @@ class FinderCommandExecutor(object):
         return self._execute_finder_command("defaults write com.apple.screencapture location ~/Pictures/Screenshots; killall SystemUIServer", shell=True)
     def add_recently_used_applications_stack_to_dock(self):
         return self._execute_finder_command("defaults write com.apple.dock persistent-others -array-add '{ \"tile-data\" = { \"list-type\" = 1; }; \"tile-type\" = \"recents-tile\"; }'; killall Dock", shell=True)
+    def install_homebrew(self):
+        return self._execute_finder_command("/usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"", shell=True)
 
 class Booter(object):
     """docstring for Booter."""
