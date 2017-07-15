@@ -19,15 +19,14 @@ class Booter(object):
     def __init__(self, directory_handler):
         super(Booter, self).__init__()
         self.directory_handler = directory_handler
-    def copy_home_dot_files(self):
-        for file in
-    def set_up(self):
-        self.copy_home_dot_files()
-        print 'Copied home dot files'
-        onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+    def copy_home_dot_files(self, dot_files_directory):
+        onlyfiles = [f for f in listdir(dot_files_directory) if isfile(join(dot_files_directory, f))]
         for dot_file in onlyfiles:
-            print
+            print dot_file
             # shutil.copy()
+    def set_up(self):
+        self.copy_home_dot_files(self.get_home_dot_files_directory())
+        print 'Copied home dot files'
 
 
 
