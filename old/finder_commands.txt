@@ -2,4 +2,4 @@
 mkdir ~/Pictures/Screenshots; defaults write com.apple.screencapture location ~/Pictures/Screenshots; killall SystemUIServer; echo "Desktop clutter begone"
 
 # this adds a recently used applications stack to the dock
-defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }'; killall Dock
+defaults write com.apple.dock persistent-others -array-add '{ \"tile-data\" = { \"list-type\" = 1; }; \"tile-type\" = \"recents-tile\"; }'; killall Dock
