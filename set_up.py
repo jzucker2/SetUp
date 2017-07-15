@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import shutil
 
 class DirectoryHandler(object):
     """docstring for DirectoryHandler."""
@@ -19,10 +20,15 @@ class Booter(object):
         super(Booter, self).__init__()
         self.directory_handler = directory_handler
     def copy_home_dot_files(self):
-        pass
+        for file in
     def set_up(self):
         self.copy_home_dot_files()
         print 'Copied home dot files'
+        onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+        for dot_file in onlyfiles:
+            print
+            # shutil.copy()
+
 
 
 
