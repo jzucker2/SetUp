@@ -10,6 +10,10 @@ Right now this needs work
 * Here's the [resource about setting up git on GitHub](https://help.github.com/articles/caching-your-github-password-in-git/)
 * [Updating credentials for 2FA](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
 * [Updating KeyChain for credentials](https://help.github.com/articles/updating-credentials-from-the-osx-keychain/)
+* Set up ssh key permissions [here](https://stackoverflow.com/questions/9270734/ssh-permissions-are-too-open-error):
+```
+chmod 400 ~/.ssh/id_rsa
+```
 
 ## Atom Packages
 
@@ -34,6 +38,7 @@ Right now this needs work
 * Dropbox
 * Chrome
 * GrandPerspective
+* Bartender (top bar app)
 
 
 
