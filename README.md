@@ -11,6 +11,15 @@ Right now this needs work
 * [Updating credentials for 2FA](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
 * [Updating KeyChain for credentials](https://help.github.com/articles/updating-credentials-from-the-osx-keychain/)
 
+## Atom Packages
+
+* [busy-signal](https://atom.io/packages/busy-signal)
+* [intentions](https://atom.io/packages/intentions)
+* [linter](https://atom.io/packages/linter)
+* [linter-eslint](https://atom.io/packages/linter-eslint)
+* [linter-ui-default](https://atom.io/packages/linter-ui-default)
+
+
 
 ## TODO
 
