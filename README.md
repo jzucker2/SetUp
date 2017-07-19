@@ -39,6 +39,7 @@ chmod 400 ~/.ssh/id_rsa
 * Chrome
 * GrandPerspective
 * Bartender (top bar app)
+* iTerm2
 
 
 
