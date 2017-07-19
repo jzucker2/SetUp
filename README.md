@@ -44,3 +44,6 @@ Right now this needs work
 - [ ] First path in python, second pass in bash
 - [ ] Get working!
 - [ ] Configure Travis
+- [ ] Add versioning
+- [ ] Add command line args
+- [ ] Convert to bash
