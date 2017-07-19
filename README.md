@@ -33,6 +33,7 @@ Right now this needs work
 * Slack
 * Dropbox
 * Chrome
+* GrandPerspective
 
 
 
