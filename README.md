@@ -19,6 +19,21 @@ Right now this needs work
 * [linter-eslint](https://atom.io/packages/linter-eslint)
 * [linter-ui-default](https://atom.io/packages/linter-ui-default)
 
+## Extras Not in Script
+
+* Xcode (and beta)
+* Android Studio
+* atom (and command line tools)
+* GitHub 2FA
+* Viscosity
+* SSH keys
+* Caffeine
+* VLC
+* SublimeText
+* Slack
+* Dropbox
+* Chrome
+
 
 
 ## TODO
