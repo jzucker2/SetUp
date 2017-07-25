@@ -34,6 +34,7 @@ chmod 400 ~/.ssh/id_rsa
 * Caffeine
 * VLC
 * SublimeText
+* MacDown
 * Slack
 * Dropbox
 * Chrome
