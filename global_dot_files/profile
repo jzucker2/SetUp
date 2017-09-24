@@ -25,6 +25,7 @@ alias SublimeText="open -a /Applications/Sublime\ Text\ 2.app"
 alias Xcode="open -a /Applications/Xcode.app"
 alias Beta-Xcode="open -a /Applications/Beta/Xcode-beta.app"
 alias MacDown="open -a /Applications/MacDown.app"
+alias mysql="/usr/local/mysql/bin/mysql"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # golang
