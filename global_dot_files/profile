@@ -25,8 +25,12 @@ alias SublimeText="open -a /Applications/Sublime\ Text\ 2.app"
 alias Xcode="open -a /Applications/Xcode.app"
 alias Beta-Xcode="open -a /Applications/Beta/Xcode-beta.app"
 alias MacDown="open -a /Applications/MacDown.app"
-alias mysql="/usr/local/mysql/bin/mysql"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# PN Portal
+alias mysql-start="sudo /usr/local/mysql/support-files/mysql.server start"
+alias mysql-stop="sudo /usr/local/mysql/support-files/mysql.server stop’mysqld_safe --user=root"
+alias mysql="/usr/local/mysql/bin/mysql"
 
 # golang
 export GOPATH=$HOME/Coding/golang
