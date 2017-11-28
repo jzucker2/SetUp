@@ -5,6 +5,9 @@ source ~/.git-prompt.sh
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export VIRTUALENV_PYTHON=/usr/local/opt/python/libexec/bin/python
 
+# virtualenvwrapper
+source "/usr/local/bin/virtualenvwrapper.sh"
+
 # First suggested way
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
