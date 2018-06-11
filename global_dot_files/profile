@@ -3,10 +3,11 @@ source ~/.git-prompt.sh
 
 # homebrew python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export VIRTUALENV_PYTHON=/usr/local/opt/python/libexec/bin/python
+#export VIRTUALENV_PYTHON=/usr/local/opt/python/libexec/bin/python
 
 # virtualenvwrapper
-source "/usr/local/bin/virtualenvwrapper.sh"
+#export WORKON_HOME=~/Envs
+#source "/usr/local/bin/virtualenvwrapper.sh"
 
 # First suggested way
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
@@ -21,10 +22,20 @@ GIT_PS1_SHOWCOLORHINTS=true
 #second suggested way
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 
+# added for k8s
+#export KUBECONFIG=$HOME/.kube/bronze
+
+# airflow for portal
+export AIRFLOW_HOME=~/Coding/caravan
+
 # yarn
 export PATH="$HOME/.yarn/bin:$PATH"
 
 # aliases
+alias k="kubectl"
+alias kubedash="open http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/"
+#function k-set-namespace { kubectl config set-context $(kubectl config current-context) --namespace="$1"; }
+#export -f k-set-namespace
 alias FUCK_DERIVED_DATA="rm -rf ~/Library/Developer/Xcode/DerivedData"
 # investigate further with this: http://stackoverflow.com/questions/29930198/can-i-delete-data-from-ios-devicesupport
 alias CLEAN_UP_XCODE="xcrun simctl delete unavailable"
@@ -33,12 +44,13 @@ alias Xcode="open -a /Applications/Xcode.app"
 alias Beta-Xcode="open -a /Applications/Beta/Xcode-beta.app"
 alias MacDown="open -a /Applications/MacDown.app"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-alias PyCharm="open -a /Applications/PyCharm\ CE.app"
+alias PyCharm="open -a /Applications/PyCharm.app"
 
 # PN Portal
 alias mysql="/usr/local/mysql/bin/mysql"
 alias mysql-start="/usr/local/mysql/support-files/mysql.server start"
 alias mysql-stop="/usr/local/mysql/support-files/mysql.server stop"
+export PATH="/usr/local/sbin:$PATH"
 
 # golang
 export GOPATH=$HOME/Coding/golang
@@ -58,8 +70,19 @@ alias VIRTUAL_ENV_ACTIVATE="virtualenv env; source env/bin/activate"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jordan/google-cloud-sdk/path.bash.inc' ]; then source '/Users/jordan/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jordan/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/jordan/google-cloud-sdk/completion.bash.inc'; fi
 
 # openssl brew instructions
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+#export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# this needs to go to the bottom: https://github.com/pyenv/pyenv-virtualenv/issues/236
+# pyenv-virtualenv
+#if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
