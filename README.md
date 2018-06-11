@@ -17,6 +17,10 @@ chmod 400 ~/.ssh/id_rsa
 * Notes on cool [git git git git config](http://caiustheory.com/git-git-git-git-git/)
 * Interesting [gitconfig from same guy as above](https://github.com/caius/zshrc/blob/master/dotfiles/gitconfig#L7)
 
+# Python
+
+* Found a great [pyenv cheatsheet](https://github.com/malexer/cheatsheets/blob/master/pyenv.md)
+
 ## Atom Packages
 
 * [busy-signal](https://atom.io/packages/busy-signal)
