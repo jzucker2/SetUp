@@ -5,9 +5,6 @@ source ~/.git-prompt.sh
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 #export VIRTUALENV_PYTHON=/usr/local/opt/python/libexec/bin/python
 
-# virtualenvwrapper
-#export WORKON_HOME=~/Envs
-#source "/usr/local/bin/virtualenvwrapper.sh"
 
 # First suggested way
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
@@ -25,10 +22,8 @@ alias pnd="/Users/jordan/Coding/pn-dev/bin/pnd"
 #second suggested way
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 
-
-
 # yarn
-export PATH="$HOME/.yarn/bin:$PATH"
+# export PATH="$HOME/.yarn/bin:$PATH"
 
 # aliases
 alias k="kubectl"
@@ -56,39 +51,23 @@ alias Scrivener="open -a /Applications/Scrivener.app"
 export PATH="/usr/local/sbin:$PATH"
 
 
-# This is necessary; see https://github.com/oktadeveloper/okta-aws-cli-assume-role/issues/25
-export OKTA_BROWSER_AUTH=true
-
-# golang
-export GOPATH=$HOME/Coding/golang
-export PATH=$PATH:$GOPATH/bin
-
-# thefuck (homebrew)
-# eval "$(thefuck --alias)"
+# golang off by default
+# export GOPATH=$HOME/Coding/golang
+# export PATH=$PATH:$GOPATH/bin
 
 # Python
 alias VIRTUAL_ENV_ACTIVATE="virtualenv env; source env/bin/activate"
 
 # nvm
-#export NVM_DIR=$HOME/.nvm
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#export NVM_DIR="/Users/jordanz/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-
-# openssl brew instructions
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# rvm uninstalled by default
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # this needs to go to the bottom: https://github.com/pyenv/pyenv-virtualenv/issues/236
 # pyenv-virtualenv
 #if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
