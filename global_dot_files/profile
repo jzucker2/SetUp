@@ -16,9 +16,6 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWUPSTREAM="verbose"
 GIT_PS1_SHOWCOLORHINTS=true
 
-#pnd alias
-alias pnd="/Users/jordan/Coding/pn-dev/bin/pnd"
-
 #second suggested way
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 
