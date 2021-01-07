@@ -21,17 +21,17 @@ class DirectoryHandler(object):
     # def get_coding_symlink(self):
     #     return os.path.join(self.get_home_directory(), 'Coding')
     def set_up_path_and_home_and_desktop_symlink(self, directory_path):
-        print 'directory_path: %s' % directory_path
+        print('directory_path: {}'.format(directory_path))
         directory_name = os.path.basename(os.path.normpath(directory_path))
-        print 'directory_name: %s' % directory_name
+        print('directory_name: {}'.format(directory_name))
         if not os.path.exists(directory_path):
             os.makedirs(directory_path)
         home_symlink_path = os.path.join(self.get_home_directory(), directory_name)
-        print 'home_symlink_path: %s' % home_symlink_path
+        print('home_symlink_path: {}'.format(home_symlink_path))
         if not os.path.exists(home_symlink_path):
             os.symlink(directory_path, home_symlink_path)
         desktop_symlink_path = os.path.join(self.get_home_directory(), 'Desktop', directory_name)
-        print 'desktop_symlink_path: %s' % desktop_symlink_path
+        print('desktop_symlink_path: {}'.format(desktop_symlink_path))
         if not os.path.exists(desktop_symlink_path):
             os.symlink(directory_path, desktop_symlink_path)
 
@@ -55,15 +55,15 @@ class Booter(object):
         self.directory_handler = kwargs.pop('directory_handler')
         self.finder_command_executor = kwargs.pop('finder_command_executor')
     def copy_global_dot_files(self, source, destination):
-        print 'source: %s' % source
-        print 'destination: %s' % destination
+        print('source: {}'.format(source))
+        print('destination: {}'.format(destination))
         onlyfiles = [f for f in os.listdir(source) if os.path.isfile(os.path.join(source, f))]
         for dot_file in onlyfiles:
-            print dot_file
+            print(dot_file)
             dot_file_source = os.path.join(source, dot_file)
-            print 'dot_file_source: %s' % dot_file_source
+            print('dot_file_source: {}'.format(dot_file_source))
             dot_file_destination = os.path.join(destination, '.' + dot_file)
-            print 'dot_file_destination: %s' % dot_file_destination
+            print('dot_file_destination: {}'.format(dot_file_destination))
             shutil.copy(dot_file_source, dot_file_destination)
     def set_up_coding_directory(self):
         self.directory_handler.set_up_path_and_home_and_desktop_symlink(self.directory_handler.get_coding_directory())
@@ -71,25 +71,25 @@ class Booter(object):
         self.directory_handler.set_up_path_and_home_and_desktop_symlink(self.directory_handler.get_screenshots_directory())
     def set_up_custom_finder_commands(self):
         screen_shots_redirect_result = self.finder_command_executor.redirect_screenshots()
-        print 'screen_shots_redirect_result: %s' % screen_shots_redirect_result
+        print('screen_shots_redirect_result: {}'.format(screen_shots_redirect_result))
         recently_used_apps_stack = self.finder_command_executor.add_recently_used_applications_stack_to_dock()
-        print 'recently_used_apps_stack: %s' % recently_used_apps_stack
+        print('recently_used_apps_stack: {}'.format(recently_used_apps_stack))
 
     def set_up(self):
         self.copy_global_dot_files(self.directory_handler.get_project_dot_files_directory(), self.directory_handler.get_home_directory())
-        print 'Copied home dot files'
+        print('Copied home dot files')
         self.set_up_coding_directory()
-        print 'Set up Coding directory and symlink'
+        print('Set up Coding directory and symlink')
         self.set_up_screenshots_directory()
-        print 'Set up Screenshots directory and symlink'
+        print('Set up Screenshots directory and symlink')
         self.set_up_custom_finder_commands()
-        print 'Set up custom finder commands'
+        print('Set up custom finder commands')
 
 
 
 
 def main():
-    print 'hello'
+    print('hello')
     directory_handler = DirectoryHandler()
     finder_command_executor = FinderCommandExecutor()
     booter = Booter(directory_handler=directory_handler, finder_command_executor=finder_command_executor)
